@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import './NavBar.css';
-import logo from '../../../assets/logo.jpg';
+import logo from '../../../assets/music1.jpg';
 import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
 
@@ -18,11 +18,11 @@ const Navbar = () => {
 
 
     const Menu = <>
-        <li><Link className='font-bold bg-slate-300 py-3 px-6' to="/">Home</Link></li>
-        <li><Link className='font-bold bg-slate-300 ml-2 py-3 px-6' to="/allToys">Instructors</Link></li>
-        <li><Link className='font-bold bg-slate-300 ml-2 py-3 px-6' to="/blog">Classes</Link></li>
+        <li><Link className='font-bold bg-slate-300 py-3 px-6 hover:text-white' to="/">Home</Link></li>
+        <li><Link className='font-bold bg-slate-300 ml-2 py-3 px-6 hover:text-white' to="/allToys">Instructors</Link></li>
+        <li><Link className='font-bold bg-slate-300 ml-2 py-3 px-6 hover:text-white' to="/blog">Classes</Link></li>
         { user ?<li>
-            <Link to="/dashboard/mycart" className='font-bold bg-slate-300 ml-2 py-3 px-6 mr-2'>
+            <Link to="/dashboard/mycart" className='font-bold bg-slate-300 ml-2 py-3 px-6 mr-2 hover:text-white'>
                 <button>
                     <FaShoppingCart></FaShoppingCart>
                     {/* <div className="badge badge-secondary">+{cart?.length || 0}</div> */}
@@ -40,7 +40,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-300 h-28 pt-4">
+        <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black h-28 pt-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,7 +52,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center'>
                     <Link to="/" className="nav-logo"> <img src={logo} alt="" /> </Link>
-                    <h4 className='font-bold text-2xl mb-2 ml-6 uppercase'>Music School</h4>
+                    <h4 className='font-bold text-2xl mb-2 ml-6 uppercase text-white'>Music School</h4>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
