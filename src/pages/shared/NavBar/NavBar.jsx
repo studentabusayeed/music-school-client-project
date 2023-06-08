@@ -18,17 +18,15 @@ const Navbar = () => {
 
 
     const Menu = <>
-        <li><Link className='font-bold bg-slate-300 py-3 px-6 hover:text-white' to="/">Home</Link></li>
-        <li><Link className='font-bold bg-slate-300 ml-2 py-3 px-6 hover:text-white' to="/allToys">Instructors</Link></li>
-        <li><Link className='font-bold bg-slate-300 ml-2 py-3 px-6 hover:text-white' to="/blog">Classes</Link></li>
-        { user ?<li>
-            <Link to="/dashboard/mycart" className='font-bold bg-slate-300 ml-2 py-3 px-6 mr-2 hover:text-white'>
-                <button>
-                    <FaShoppingCart></FaShoppingCart>
-                    {/* <div className="badge badge-secondary">+{cart?.length || 0}</div> */}
-                </button>
+        <li className='text-white'><Link className='font-bold bg-slate-500 py-3 px-4 hover:text-white mr-2' to="/">Home</Link></li>
+        <li className='text-white'><Link className='font-bold bg-slate-500 py-3 px-4 hover:text-white mr-2' to="/instructors">Instructors</Link></li>
+        <li className='text-white'><Link className='font-bold bg-slate-500 py-3 px-8 hover:text-white mr-2' to="/blog">Classes</Link></li>
+        {user ? <li className='text-white'>
+            <Link to="/dashboard/mycart" className='font-bold bg-slate-500 py-3 px-8 hover:text-white mr-2'>
+                <FaShoppingCart></FaShoppingCart>
+                {/* <div className="badge badge-secondary">+{cart?.length || 0}</div> */}
             </Link>
-        </li>: ''}
+        </li> : ''}
 
         {user?.email ? <>
             <img className={user.photoURL ? 'img-menu' : ''} title={user?.displayName} src={user?.photoURL
