@@ -1,0 +1,134 @@
+[
+    {
+        "_id": "642c155b2c4774f05c36eeaa",
+        "Instructors_img": "https://i.ibb.co/ZTty4pj/profile-2t.jpg",
+        "classes": "Guitar",
+        "email": "mike@gmail.com",
+        "price": 150,
+        "Instructors": "Mike Hammers",
+        "image": "https://i.ibb.co/Wc3DpLL/product-3-300x300.jpg",
+        "seat": 160,
+        "student": 150
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb9",
+        "Instructors_img": "https://i.ibb.co/0njgFZz/profile-1t.jpg",
+        "classes": "Vocal",
+        "Instructors": "Mary May",
+        "email": "mary@gmail.com",
+        "price": 140,
+        "image": "https://i.ibb.co/VLb3hQB/microphone-segment-vinyl-record.jpg",
+        "seat": 130,
+        "student": 120
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7c",
+        "Instructors_img": "https://i.ibb.co/QbyPptn/profile-3t.jpg",
+        "classes": "Drum",
+        "Instructors": "Stanley Broad",
+        "email": "stanley@gmail.com",
+        "price": 130,
+        "image": "https://i.ibb.co/7RKpt87/drums-drum-set-beautiful-blue-red-background-with-rays-light.jpg",
+        "seat": 140,
+        "student": 130
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee88",
+        "Instructors_img": "https://i.ibb.co/yB8cKbL/profile-4t.jpg",
+        "classes": "Piano",
+        "Instructors": "Sandy Gold",
+        "email": "sandy@gmail.com",
+        "price": 120,
+        "image": "https://i.ibb.co/tmFnsRV/top-view-digital-piano-chair.jpg",
+        "seat": 130,
+        "student": 125
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7a",
+        "Instructors_img": "https://i.ibb.co/t4Dnd9F/Z8VAR3H.jpg",
+        "classes": "Saxophone",
+        "Instructors": "David Cox",
+        "email": "david@gmail.com",
+        "price": 110,
+        "image": "https://i.ibb.co/YhsVWWB/2870995-6592.jpg",
+        "seat": 150,
+        "student": 140
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8c",
+        "Instructors_img": "https://i.ibb.co/S6BpTt7/G9CBPRU.jpg",
+        "classes": "DJ & Composing",
+        "Instructors": "Kathy Davis",
+        "email": "kathy@gmail.com",
+        "price": 100,
+        "image": "https://i.ibb.co/hdfmdD1/audio-engineer-using-track-recorder.jpg",
+        "seat": 140,
+        "student": 135
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee94",
+        "Instructors_img": "https://i.ibb.co/gz1SqBM/94VHKRA.jpg",
+        "classes": "Cymbal",
+        "Instructors": "John Lewis",
+        "email": "john@gmail.com",
+        "price": 115,
+        "image": "https://i.ibb.co/S3fL2gH/closeup-drumsticks-cymbal-drum.jpg",
+        "seat": 120,
+        "student": 115
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9e",
+        "Instructors_img": "https://i.ibb.co/6vc3nfS/9vdfl2v.jpg",
+        "classes": "Trumpet",
+        "Instructors": "Daved Cox",
+        "email": "daved@gmail.com",
+        "price": 125,
+        "image": "https://i.ibb.co/QMRmwSH/10602768-42401.jpg",
+        "seat": 120,
+        "student": 110
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea6",
+        "Instructors_img": "https://i.ibb.co/q7PCV36/FMT4QB7.jpg",
+        "classes": "Luty",
+        "Instructors": "Katiy Davis",
+        "email": "katiy@gmail.com",
+        "price": 135,
+        "image": "https://i.ibb.co/Km21GCb/7038205-395.jpg",
+        "seat": 110,
+        "student": 105
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeaf",
+        "Instructors_img": "https://i.ibb.co/8KMCRLJ/EWC24GN.jpg",
+        "classes": "Electric Guitar",
+        "Instructors": "Lewis",
+        "email": "lewis@gmail.com",
+        "price": 110,
+        "image": "https://i.ibb.co/nj6M6Rt/959523-OF1-HA30.jpg",
+        "seat": 90,
+        "student": 80
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee89",
+        "Instructors_img": "https://i.ibb.co/QD6r0mN/E4Z6KX9.jpg",
+        "classes": "keyboard",
+        "Instructors": "Devin Mueller",
+        "email": "mueller@gmail.com",
+        "price": 120,
+        "image": "https://i.ibb.co/wcGFWyB/piano-keyboard-foreground.jpg",
+        "seat": 100,
+        "student": 90
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8a",
+        "Instructors_img": "https://i.ibb.co/Qm5P7F7/3PQNVSH.jpg",
+        "classes": "Flute",
+        "Instructors": "Xavier Mcfarla",
+        "email": "xavier@gmail.com",
+        "price": 105,
+        "image": "https://i.ibb.co/hDRwvHn/pexels-charles-parker-6647703.jpg",
+        "seat": 80,
+        "student": 70
+    }
+]
