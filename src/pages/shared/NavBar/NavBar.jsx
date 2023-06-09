@@ -20,7 +20,7 @@ const Navbar = () => {
     const Menu = <>
         <li className='text-white'><Link className='font-bold bg-slate-500 py-3 px-4 hover:text-white mr-2' to="/">Home</Link></li>
         <li className='text-white'><Link className='font-bold bg-slate-500 py-3 px-4 hover:text-white mr-2' to="/instructors">Instructors</Link></li>
-        <li className='text-white'><Link className='font-bold bg-slate-500 py-3 px-8 hover:text-white mr-2' to="/blog">Classes</Link></li>
+        <li className='text-white'><Link className='font-bold bg-slate-500 py-3 px-8 hover:text-white mr-2' to="/allClasses">Classes</Link></li>
         {user ? <li className='text-white'>
             <Link to="/dashboard/mycart" className='font-bold bg-slate-500 py-3 px-8 hover:text-white mr-2'>
                 <FaShoppingCart></FaShoppingCart>
