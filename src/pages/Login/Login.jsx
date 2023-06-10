@@ -43,7 +43,7 @@ const Login = () => {
             <Helmet>
                 <title>Music School | Login</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 pt-24 pb-6">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="w-1/3 ml-20">
                         <img className='rounded' src={login} alt="" />

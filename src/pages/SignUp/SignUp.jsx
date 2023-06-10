@@ -3,48 +3,47 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../shared/SocialLogin/SocialLogin";
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import login from '../../assets/log-image.jpg';
 import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
-    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const navigate = useNavigate();
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
+    const { createUser, updateUserProfile } = useContext(AuthContext);
     const password = useRef({});
     password.current = watch("password", "");
-
-    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const onSubmit = data => {
         createUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
-                // updateUserProfile(data.name, data.photoURL)
-                //     .then(() => {
-                //         const saveUser = { name: data.name, email: data.email }
-                //         fetch('http://localhost:5000/users', {
-                //             method: 'POST',
-                //             headers: {
-                //                 'content-type': 'application/json'
-                //             },
-                //             body: JSON.stringify(saveUser)
-                //         })
-                //             .then(res => res.json())
-                //             .then(data => {
-                //                 if (data.insertedId) {
-                //                     reset();
-                //                     Swal.fire({
-                //                         position: 'top-end',
-                //                         icon: 'success',
-                //                         title: 'User created successfully',
-                //                         showConfirmButton: false,
-                //                         timer: 1500
-                //                     });
-                //                     navigate('/');
-                //                 }
-                // })
-                // })
-                // .catch(error => console.log(error));
+                updateUserProfile(data.name, data.photoURL)
+                    .then(() => {
+                        const saveUser = { name: data.name, email: data.email }
+                        fetch('http://localhost:5000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(saveUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    reset();
+                                    Swal.fire({
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        title: 'User created successfully',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate('/');
+                                }
+                })
+                })
+                .catch(error => console.log(error));
             })
             .then(err => console.log(err.message));
     };
@@ -54,7 +53,7 @@ const SignUp = () => {
             <Helmet>
                 <title>Music School | Sign Up</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200 py-6">
+            <div className="hero min-h-screen bg-base-200 pb-6 pt-24">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="w-1/3 ml-20">
                         <img className='rounded' src={login} alt="" />
