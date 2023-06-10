@@ -6,6 +6,9 @@ import ErrorPage from "../pages/Home/ErrorPage/ErrorPage";
 import Login from "../pages/Login/Login";
 import InstructorsPage from "../pages/InstructorsPage/InstructorsPage";
 import AllClasses from "../pages/AllClasses/AllClasses";
+import Dashboard from "../layout/Dashboard";
+import MyCart from "../pages/Dashboard/MyCart";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -18,21 +21,31 @@ export const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/signup',
+                path: 'signup',
                 element: <SignUp></SignUp>
             },
             {
-                path: '/login',
+                path: 'login',
                 element: <Login></Login>
             },
             {
-                path: '/instructors',
+                path: 'instructors',
                 element: <InstructorsPage></InstructorsPage>
             },
             {
-                path: '/allClasses',
+                path: 'classes',
                 element: <AllClasses></AllClasses>
             }
         ]
+    },
+    {
+        path: "dashboard",
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children: [
+          {
+            path: 'mycart',
+            element: <MyCart></MyCart>
+          }
+        ]
     }
-])
+]);
