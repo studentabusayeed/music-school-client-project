@@ -53,13 +53,13 @@ const SignUp = () => {
             <Helmet>
                 <title>Music School | Sign Up</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200 pb-6 pt-24">
+            <div className="hero min-h-screen bg-base-200 pb-2 pt-24">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="w-1/3 ml-20">
                         <img className='rounded' src={login} alt="" />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                        <form onSubmit={handleSubmit(onSubmit)} className="card-body w-full">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -96,11 +96,11 @@ const SignUp = () => {
                                 {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must be less then 20 characters</p>}
                                 {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one upper case one lower case, one number and one special characters</p>}
                             </div>
-                            <div className="form-control mt-6">
+                            <div className="form-control">
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p className='my-4 text-center'><small>Already have an account <Link className='text-orange-600 font-bold ms-1' to="/login">Login</Link></small></p>
+                        <p className='my-1 text-center'><small>Already have an account <Link className='text-orange-600 font-bold ms-1' to="/login">Login</Link></small></p>
                         <SocialLogin></SocialLogin>
                     </div>
                 </div>

@@ -52,8 +52,8 @@ const AllClassesPage = ({ item }) => {
     }
 
     return (
-        <div className="card w-96 bg-base-300 shadow-xl instructor-img">
-            <figure className="px-6 pt-6">
+        <div className="card w-80 bg-base-300 shadow-xl instructor-img">
+            <figure className="px-6 pt-2">
                 <img src={image} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body">

@@ -43,13 +43,13 @@ const Login = () => {
             <Helmet>
                 <title>Music School | Login</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200 pt-24 pb-6">
+            <div className="hero min-h-screen bg-base-200 pt-24 pb-2">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="w-1/3 ml-20">
                         <img className='rounded' src={login} alt="" />
                     </div>
-                    <div className="card md:w-1/2 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleLogin} className="card-body">
+                    <div className="card flex-shrink-0 md:w-1/2 w-full max-w-sm shadow-2xl bg-base-100 rounded">
+                        <form onSubmit={handleLogin} className="card-body w-full">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -65,11 +65,11 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
+                            <div className="form-control mt-2">
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
-                        <p className='my-4 text-center'>New Here?<Link className='text-orange-600 font-bold ms-1' to="/signup">Create an account</Link></p>
+                        <p className='my-1 text-center'>New Here?<Link className='text-orange-600 font-bold ms-1' to="/signup">Create an account</Link></p>
                         <SocialLogin></SocialLogin>
                     </div>
                 </div>

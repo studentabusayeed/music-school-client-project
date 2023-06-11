@@ -19,12 +19,3 @@ const useCart = () => {
 }
 
 export default useCart;
-
-// queryFn: async () => {
-//     const res = await fetch(`http://localhost:5000/carts?email=${useemail}`, {
-//         headers:{
-//             authorization: `bearer ${token}`
-//         }
-//     })
-//     return res.json();
-// },
