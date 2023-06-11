@@ -16,7 +16,7 @@ const SocialLogin = () => {
                 console.log(loggedUser);
                 const saveUser = { name: loggedUser.displayName, email: loggedUser.email }
 
-                fetch('http://localhost:5000/users', {
+                fetch('https://music-school-server-project-studentabusayeed.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -34,7 +34,7 @@ const SocialLogin = () => {
         <div>
             <div className="divider">OR</div>
             <div className="w-full text-center my-4">
-                <button onClick={handleGoogleSignIn} className="btn btn-circle btn-outline">
+                <button onClick={handleGoogleSignIn} className="btn btn-circle btn-outline bg-success">
                     <FaGoogle></FaGoogle>
                 </button>
             </div>

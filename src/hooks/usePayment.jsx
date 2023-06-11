@@ -5,7 +5,7 @@ const usePayment = () => {
     const {data: payment = [], isLoading: loading, refetch} = useQuery({
         queryKey: ['menu'],
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/payment');
+            const res = await fetch('https://music-school-server-project-studentabusayeed.vercel.app/payment');
             return res.json();
         }
     })
