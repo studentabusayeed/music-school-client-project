@@ -29,13 +29,13 @@ const Dashboard = () => {
                             <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> Manage Users</NavLink></li>
                         </> : <>
                             <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
-                            <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>
+                            <li><NavLink to="/dashboard/paymenthistoy"><FaWallet></FaWallet> Payment History</NavLink></li>
                             <li>
                                 <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Selected Classes
                                     <span className="badge badge-secondary">+{cart?.length || 0}</span>
                                 </NavLink>
                             </li>
-                            <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> My Enrolled Classes</NavLink></li>
+                            <li><NavLink to="/dashboard/myenrooledclass"><FaCalendarAlt></FaCalendarAlt> My Enrolled Classes</NavLink></li>
                         </>
                     }
                     <div className="divider"></div>

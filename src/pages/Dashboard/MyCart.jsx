@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { FaTrashAlt } from "react-icons/fa";
-import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import useCart from "../../hooks/useCart";
+import Swal from "sweetalert2";
 
 const MyCart = () => {
     const [cart, refetch] = useCart();
