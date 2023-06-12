@@ -3,7 +3,6 @@ import { FaShoppingCart, FaWallet, FaCalendarAlt, FaHome, FaUtensils, FaBook, Fa
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
 import useInstructor from "../hooks/useInstructor";
-import useStudent from "../hooks/useStudent";
 
 const Dashboard = () => {
     const [cart] = useCart();
@@ -12,7 +11,6 @@ const Dashboard = () => {
     // const isAdmin = true;
     const [isAdmin] = useAdmin();
     const [isInstructor] = useInstructor();
-    const [isStudent] = useStudent();
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
