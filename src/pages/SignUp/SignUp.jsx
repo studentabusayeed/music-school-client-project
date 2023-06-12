@@ -41,12 +41,13 @@ const SignUp = () => {
                                     });
                                     navigate('/');
                                 }
-                })
-                })
-                .catch(error => console.log(error));
+                            })
+                    })
+                    .catch(error => console.log(error));
             })
             .then(err => console.log(err.message));
     };
+
 
     return (
         <>
@@ -55,7 +56,7 @@ const SignUp = () => {
             </Helmet>
             <div className="hero min-h-screen bg-base-200 pb-2 pt-24">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="w-1/3 ml-20">
+                    <div className="w-2/5 ml-20">
                         <img className='rounded' src={login} alt="" />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -85,7 +86,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" {...register("password", {
+                                <input onChange={(e) => setPassword1(e.target.value)} type="password" {...register("password", {
                                     required: true,
                                     minLength: 6,
                                     maxLength: 20,

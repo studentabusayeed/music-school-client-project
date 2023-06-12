@@ -75,7 +75,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center'>
                     <Link to="/" className="nav-logo"> <img src={logo} alt="" /> </Link>
-                    <h4 className='font-semibold text-1xl mb-2 ml-6 uppercase text-white'>Music School</h4>
+                    <h4 className='font-semibold text-1xl mb-2 ml-6 uppercase text-white'>Stars Music</h4>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

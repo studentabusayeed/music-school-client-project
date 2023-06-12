@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-base-300 text-base-content">
             <div>
                 <Link to="/" className="toy-logo"> <img src={logo1} alt="" /> </Link>
-                <h4 className='font-bold text-2xl mb-0 mt-4 uppercase'>Music School</h4>
+                <h4 className='font-bold text-2xl mb-0 mt-4 uppercase'>Stars Music</h4>
             </div>
             <div>
                 <span className="footer-title">Contact Info</span>

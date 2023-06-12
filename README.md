@@ -1,4 +1,4 @@
-* Website name: Music School
+* Website name: Stars Music
 * Navbar Create
 * Home page banner section create
 * Home page Popular Class section create
