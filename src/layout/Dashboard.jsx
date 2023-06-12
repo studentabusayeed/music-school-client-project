@@ -2,6 +2,8 @@ import { NavLink, Outlet } from "react-router-dom";
 import { FaShoppingCart, FaWallet, FaCalendarAlt, FaHome, FaUtensils, FaBook, FaUsers } from 'react-icons/fa';
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
+import useInstructor from "../hooks/useInstructor";
+import useStudent from "../hooks/useStudent";
 
 const Dashboard = () => {
     const [cart] = useCart();
@@ -9,6 +11,8 @@ const Dashboard = () => {
     // TODO: load data from the server to have dynamic isAdmin based on Data
     // const isAdmin = true;
     const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor();
+    const [isStudent] = useStudent();
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -22,12 +26,38 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full text-base-content font-semibold">
                     {
-                        isAdmin ? <>
+                        // isAdmin ? <>
+                        //     <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
+                        //     {/* <li><NavLink to="/dashboard/addItem"><FaUtensils></FaUtensils> Add a Class</NavLink></li> */}
+                        //     <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet> Manage Class</NavLink></li>
+                        //     <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> Manage Users</NavLink></li>
+                        // </> : <>
+                        //     <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
+                        //     <li><NavLink to="/dashboard/paymenthistoy"><FaWallet></FaWallet> Payment History</NavLink></li>
+                        //     <li>
+                        //         <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Selected Classes
+                        //             <span className="badge badge-secondary">+{cart?.length || 0}</span>
+                        //         </NavLink>
+                        //     </li>
+                        //     <li><NavLink to="/dashboard/myenrooledclass"><FaCalendarAlt></FaCalendarAlt> My Enrolled Classes</NavLink></li>
+                        // </>
+                    }
+                    {
+                        isAdmin && <>
                             <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
-                            {/* <li><NavLink to="/dashboard/addItem"><FaUtensils></FaUtensils> Add a Class</NavLink></li> */}
-                            <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet> Manage Class</NavLink></li>
+                            <li><NavLink to="/dashboard/manageclass"><FaWallet></FaWallet> Manage Class</NavLink></li>
                             <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> Manage Users</NavLink></li>
-                        </> : <>
+                        </>
+                    }
+                    {
+                        isInstructor && <>
+                            <li><NavLink to="/dashboard/instructorhome"><FaHome></FaHome>Instructor Home</NavLink></li>
+                            <li><NavLink to="/dashboard/addclass"><FaUtensils></FaUtensils> Add a Class</NavLink></li>
+                            <li><NavLink to="/dashboard/paymenthistoy"><FaWallet></FaWallet> My Class</NavLink></li>
+                        </>
+                    }
+                    {
+                        !isAdmin && !isInstructor ? <>
                             <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
                             <li><NavLink to="/dashboard/paymenthistoy"><FaWallet></FaWallet> Payment History</NavLink></li>
                             <li>
@@ -36,7 +66,7 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li><NavLink to="/dashboard/myenrooledclass"><FaCalendarAlt></FaCalendarAlt> My Enrolled Classes</NavLink></li>
-                        </>
+                        </> : ''
                     }
                     <div className="divider"></div>
                     <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li>

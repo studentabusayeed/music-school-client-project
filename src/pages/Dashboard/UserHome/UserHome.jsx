@@ -9,7 +9,7 @@ const UserHome = () => {
 
     return (
         <div className="w-full m-4 text-center">
-            <h2 className="text-3xl text-center mb-5">User Home page</h2>
+            <h2 className="text-3xl text-center mb-5">{user.displayName} Home page</h2>
             <div className="stats shadow">
 
                 <div className="stat bg-orange-400">
