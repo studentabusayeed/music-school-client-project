@@ -20,23 +20,6 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full text-base-content font-semibold">
                     {
-                        // isAdmin ? <>
-                        //     <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
-                        //     {/* <li><NavLink to="/dashboard/addItem"><FaUtensils></FaUtensils> Add a Class</NavLink></li> */}
-                        //     <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet> Manage Class</NavLink></li>
-                        //     <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> Manage Users</NavLink></li>
-                        // </> : <>
-                        //     <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
-                        //     <li><NavLink to="/dashboard/paymenthistoy"><FaWallet></FaWallet> Payment History</NavLink></li>
-                        //     <li>
-                        //         <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Selected Classes
-                        //             <span className="badge badge-secondary">+{cart?.length || 0}</span>
-                        //         </NavLink>
-                        //     </li>
-                        //     <li><NavLink to="/dashboard/myenrooledclass"><FaCalendarAlt></FaCalendarAlt> My Enrolled Classes</NavLink></li>
-                        // </>
-                    }
-                    {
                         isAdmin && <>
                             <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
                             <li><NavLink to="/dashboard/manageclass"><FaWallet></FaWallet> Manage Class</NavLink></li>
