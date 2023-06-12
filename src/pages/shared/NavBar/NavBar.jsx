@@ -6,12 +6,14 @@ import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
 import useCart from '../../../hooks/useCart';
 import useAdmin from '../../../hooks/useAdmin';
+import useInstructor from '../../../hooks/useInstructor';
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useCart();
     const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor();
 
     const handleLogout = () => {
         logOut()
@@ -25,9 +27,27 @@ const Navbar = () => {
         <li className='text-white'><Link className='font-semibold bg-slate-500 py-3 px-3 hover:text-white mr-2' to="/">Home</Link></li>
         <li className='text-white'><Link className='font-semibold bg-slate-500 py-3 px-3 hover:text-white mr-2' to="/instructors">Instructors</Link></li>
         <li className='text-white'><Link className='font-semibold bg-slate-500 py-3 px-3 hover:text-white mr-2' to="/classes">Classes</Link></li>
-        <li className='text-white'><Link className='font-semibold bg-slate-500 py-3 px-3 hover:text-white mr-2' to={isAdmin ? '/dashboard/adminhome' : '/dashboard/userhome'}>Dashboard</Link></li>
+        {
+            user ? <>
+                {
+                    isAdmin && <>
+                        <li className='text-white'><Link className='font-semibold bg-slate-500 py-3 px-3 hover:text-white mr-2' to="/dashboard/adminhome">Dashboard</Link></li>
+                    </>
+                }
+                {
+                    isInstructor && <>
+                        <li className='text-white'><Link className='font-semibold bg-slate-500 py-3 px-3 hover:text-white mr-2' to="/dashboard/instructorhome">Dashboard</Link></li>
+                    </>
+                }
+                {
+                    !isAdmin && !isInstructor ? <>
+                        <li className='text-white'><Link className='font-semibold bg-slate-500 py-3 px-3 hover:text-white mr-2' to="/dashboard/userhome">Dashboard</Link></li>
+                    </> : ''
+                }
+            </> : ''
+        }
         <li className='text-white'>
-            <Link to="/dashboard/mycart" className='font-semibold bg-slate-500 py-3 px-3 hover:text-white mr-2'>
+            <Link to={isAdmin ? '/dashboard/adminhome' : '' || isInstructor ? '/dashboard/instructorhome' : '' || '/dashboard/mycart'} className='font-semibold bg-slate-500 py-3 px-3 hover:text-white mr-2'>
                 <FaShoppingCart></FaShoppingCart>
                 <div className="badge badge-secondary">+{cart?.length || 0}</div>
             </Link>

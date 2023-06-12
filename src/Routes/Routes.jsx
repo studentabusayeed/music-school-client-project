@@ -19,6 +19,7 @@ import MyEnrollClass from "../pages/Dashboard/MyEnrollClass/MyEnrollClass";
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
 import InstructorHome from "../pages/Dashboard/InstructorHome/InstructorHome";
 import ManageClass from "../pages/Dashboard/ManageClass/ManageClass";
+import InstructorRoute from "./InstructorRoute";
 
 export const router = createBrowserRouter([
     {
@@ -86,7 +87,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'instructorhome',
-                element: <InstructorHome></InstructorHome>
+                element: <InstructorRoute><InstructorHome></InstructorHome></InstructorRoute>
             },
             {
                 path: 'manageclass',

@@ -1,8 +1,8 @@
 import React from 'react';
-import useCart from '../../../hooks/useCart';
+import useMenu from '../../../hooks/useMenu';
 
 const ManageClass = () => {
-    const [cart] = useCart();
+    const [menu] = useMenu();
     return (
         <div>
             <div className="overflow-x-auto w-full">
@@ -21,7 +21,7 @@ const ManageClass = () => {
                     </thead>
                     <tbody>
                         {
-                            cart.map((item, index) => <tr
+                            menu.map((item, index) => <tr
                                 key={item._id}
                             >
                                 <td>

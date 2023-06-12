@@ -6,9 +6,6 @@ import useInstructor from "../hooks/useInstructor";
 
 const Dashboard = () => {
     const [cart] = useCart();
-
-    // TODO: load data from the server to have dynamic isAdmin based on Data
-    // const isAdmin = true;
     const [isAdmin] = useAdmin();
     const [isInstructor] = useInstructor();
     return (
@@ -18,7 +15,6 @@ const Dashboard = () => {
                 {/* Page content here */}
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
                 <Outlet></Outlet>
-
             </div>
             <div className="drawer-side bg-slate-300">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
