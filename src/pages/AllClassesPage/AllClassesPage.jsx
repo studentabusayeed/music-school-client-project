@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
 import useCart from '../../hooks/useCart';
+import { Helmet } from 'react-helmet-async';
 
 const AllClassesPage = ({ item }) => {
     const { _id, Instructors, classes, image, price, student, seat } = item;
@@ -13,7 +14,7 @@ const AllClassesPage = ({ item }) => {
     const handleAddCart = item => {
         console.log(item);
         if (user && user.email) {
-            const cartItem = { itemId: _id, classes, Instructors, student, seat,  image, price, email: user.email }
+            const cartItem = { itemId: _id, classes, Instructors, student, seat, image, price, email: user.email }
             fetch('https://music-school-server-project-studentabusayeed.vercel.app/carts', {
                 method: 'POST',
                 headers: {
@@ -52,17 +53,22 @@ const AllClassesPage = ({ item }) => {
     }
 
     return (
-        <div className="card w-80 bg-base-300 shadow-xl instructor-img">
-            <figure className="px-6 pt-2">
-                <img src={image} alt="Shoes" className="rounded-xl" />
-            </figure>
-            <div className="card-body">
-                <h2 className="card-title">Name: {classes}</h2>
-                <h2 className="text-xl">Instructor name: {Instructors}</h2>
-                <p className="text-xl">Available seats: {seat}</p>
-                <p className="text-xl text-orange-500">Price: ${price}</p>
-                <div className="card-actions">
+        <div>
+            <Helmet>
+                <title>Music School | Instructors</title>
+            </Helmet>
+            <div className="card w-80 bg-base-300 shadow-xl instructor-img">
+                <figure className="px-6 pt-2">
+                    <img src={image} alt="Shoes" className="rounded-xl" />
+                </figure>
+                <div className="card-body">
+                    <h2 className="card-title">Name: {classes}</h2>
+                    <h2 className="text-xl">Instructor name: {Instructors}</h2>
+                    <p className="text-xl">Available seats: {seat}</p>
+                    <p className="text-xl text-orange-500">Price: ${price}</p>
+                    <div className="card-actions">
                         <button onClick={() => handleAddCart(item)} className="btn btn-success text-slate-100">Select Button</button>
+                    </div>
                 </div>
             </div>
         </div>

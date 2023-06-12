@@ -13,23 +13,7 @@ const AllUsers = () => {
     console.log(users);
 
     const handleInstructorUpdate = user => {
-        // fetch(`https://music-school-server-project-studentabusayeed.vercel.app/users/admin/${user._id}`, {
-        //     method: 'PATCH'
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data.modifiedCount) {
-        //             refetch();
-        //             Swal.fire({
-        //                 position: 'top-end',
-        //                 icon: 'success',
-        //                 title: `${user.name} is an Admin Now!`,
-        //                 showConfirmButton: false,
-        //                 timer: 1500
-        //             })
-        //         }
-        //     })
+        // instructor
     }
 
     const handleAdminUpdate = user => {
