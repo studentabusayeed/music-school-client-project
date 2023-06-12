@@ -55,7 +55,7 @@ const AllClassesPage = ({ item }) => {
     return (
         <div>
             <Helmet>
-                <title>Music School | Instructors</title>
+                <title>Music School | Classes</title>
             </Helmet>
             <div className="card w-80 bg-base-300 shadow-xl instructor-img">
                 <figure className="px-6 pt-2">
