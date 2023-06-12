@@ -3,9 +3,6 @@ import './Classes.css';
 
 const Classes = ({ item }) => {
     return (
-        // <div className="card card-compact w-80 bg-base-100 shadow-xl">
-        //     <figure><img className='rounded' src={item.image} alt="Shoes" /></figure>
-        // </div>
         <div className="card card-compact w-80 bg-base-400 shadow-xl class-img">
             <figure><img src={item.image} alt="Shoes" /></figure>
             <div className="card-body">
